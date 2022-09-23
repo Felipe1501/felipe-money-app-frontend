@@ -16,17 +16,20 @@ export function getList(){
 }
 
 export function create(values) {
-    return dispatch => {
+    return submit(values, 'post')
+}
 
-        axios.post(`${BASE_URL}/billingCycles`, values)
+export function update(values) {
+    return submit(values, 'put')
+}
+
+function submit(values, method) {
+    return dispatch => {
+        const id = values._id ? values._id : '';
+        axios[method](`${BASE_URL}/billingCycles/${id}`, values)
              .then(resp => {
                 toastr.success('Sucesso!', 'Operação Realizada com sucesso.')
-                dispatch([
-                    resetForm('billingCycleForm'),
-                    getList(),
-                    selectTab('tabList'),
-                    showTabs('tabList', 'tabCreate')
-                ])
+                dispatch(init())
             }).catch(e => {
                 e.response.data.errors.forEach(error => toastr.error('Erro!', error))
              })
