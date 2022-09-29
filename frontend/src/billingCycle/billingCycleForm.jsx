@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { reduxForm, Field, formValueSelector } from 'redux-form'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { reduxForm, Field, formValueSelector } from 'redux-form';
 
-import { init } from './billingCycleActions'
-import LabelAndInput from '../common/form/labelAndInput'
-import ItemList from './itemList'
-import Summary from './summary'
+import { init } from './billingCycleActions';
+import LabelAndInput from '../common/form/labelAndInput';
+import ItemList from './itemList';
+import Summary from './summary';
 
 class BillingCycleForm extends Component {
 

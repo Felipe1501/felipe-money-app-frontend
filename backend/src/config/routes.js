@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express');
 
 module.exports = function(server) {
 
@@ -8,5 +8,5 @@ module.exports = function(server) {
 
     // Rotas de Ciclo de Pagamento 
     const BillingCycle = require('../api/billingCycle/billingCycleService')
-    BillingCycle.register(router, '/billingCycles')
+    BillingCycle.register(router, '/billingCycles');
 }

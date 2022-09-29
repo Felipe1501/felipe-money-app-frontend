@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-import ContentHeader from '../common/template/contentHeader'
-import Content from '../common/template/content'
-import Tabs from '../common/tab/tabs'
-import TabsHeader from '../common/tab/tabsHeader'
-import TabsContent from '../common/tab/tabsContent'
-import TabHeader from '../common/tab/tabHeader'
-import TabContent from '../common/tab/tabContent'
-import { init, create, update, remove } from './billingCycleActions'
+import ContentHeader from '../common/template/contentHeader';
+import Content from '../common/template/content';
+import Tabs from '../common/tab/tabs';
+import TabsHeader from '../common/tab/tabsHeader';
+import TabsContent from '../common/tab/tabsContent';
+import TabHeader from '../common/tab/tabHeader';
+import TabContent from '../common/tab/tabContent';
+import { init, create, update, remove } from './billingCycleActions';
 
-import List from './billingCycleList'
-import Form from './billingCycleForm'
+import List from './billingCycleList';
+import Form from './billingCycleForm';
 
 class BillingCycle extends Component {
 
