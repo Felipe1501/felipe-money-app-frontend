@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react'
 
 export default props => (
-    <input 
-        type={props.type}
-        { ...props.input} 
+    <input {...props.input}
         className='form-control'
         placeholder={props.placeholder}
         readOnly={props.readOnly}
-    />
+        type={props.type} />
 )
